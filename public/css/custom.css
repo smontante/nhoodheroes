@@ -1,5 +1,5 @@
 /* Add here all your CSS customizations */
-@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 .bg-color-black {
     background: red;
@@ -36,7 +36,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
-    font-family: 'Liu Jian Mao Cao', cursive;
+    font-family: 'Roboto Mono', monospace;
   }
 
   @media only screen and (max-width: 490px) {
