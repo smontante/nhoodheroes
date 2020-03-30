@@ -1,4 +1,6 @@
 /* Add here all your CSS customizations */
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+
 .bg-color-black {
     background: red;
 }
@@ -8,3 +10,37 @@
     padding: 20px;
     margin: 5px;
 }
+
+.parallax {
+    /* The image used */
+    background-image: url('../img/mask-on.jpg');
+  
+    /* Set a specific height */
+    height: 200px;
+    padding-top:100px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(-1px) scale(1.5);
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .centered {
+    padding-top : 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+  }
+
+  @media only screen and (max-width: 490px) {
+    .centered {
+        font-size: 15px;
+      }
+  }
