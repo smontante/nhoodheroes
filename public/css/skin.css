@@ -1059,9 +1059,9 @@ html .show > .btn-light-scale-2.dropdown-toggle {
 }
 
 html .btn-outline.btn-primary {
-	color: #111111;
-	background-color: transparent;
-	border-color: #111111;
+	color: white;
+	background-color: #23304A;
+	border-color: white;
 }
 
 html .btn-outline.btn-primary:hover,
