@@ -30,6 +30,7 @@
   }
 
   .centered {
+    color:red;
     padding-top : 20px;
     position: absolute;
     top: 50%;
