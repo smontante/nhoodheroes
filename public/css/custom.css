@@ -47,5 +47,12 @@
   @media only screen and (max-width: 490px) {
     .centered {
         font-size: 15px;
+        width: 100%;
+        padding: 66px;
+        height: 300px;
       }
+
+    .parallax {
+      height: 400px;
+    }
   }
