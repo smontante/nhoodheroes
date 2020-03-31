@@ -25,19 +25,39 @@
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('product', {
         id: '4730789036091',
-        node: document.getElementById('product-component-1585675220601'),
+        node: document.getElementById('product-component-1585694603353'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
   "product": {
     "styles": {
       "product": {
         "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
+          "max-width": "100%",
+          "margin-left": "0",
           "margin-bottom": "50px"
-        }
+        },
+        "text-align": "left"
+      },
+      "title": {
+        "font-size": "26px"
+      },
+      "price": {
+        "font-size": "18px"
+      },
+      "compareAt": {
+        "font-size": "15.299999999999999px"
+      },
+      "unitPrice": {
+        "font-size": "15.299999999999999px"
       }
     },
+    "layout": "horizontal",
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "description": true
+    },
+    "width": "100%",
     "text": {
       "button": "Add to cart"
     }
@@ -83,6 +103,7 @@
   }
 })();
 /*]]>*/
+
 
 /*<![CDATA[*/
 (function () {
