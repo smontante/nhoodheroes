@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
-.bg-color-black {
-    background: red;
-}
 
 .product-img img {
     max-width: 100%;
