@@ -24,7 +24,7 @@
     transform: translateZ(-1px) scale(1.5);
     position: relative;
     text-align: center;
-    color: white;
+    color: #706F6F;
   }
 
   .centered {
@@ -38,7 +38,7 @@
     font-size: 30px;
     font-family: 'Roboto Mono', monospace;
   }
-  
+
   .product-info-detail {
     list-style-type: none;
     line-height: 30px;
