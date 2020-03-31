@@ -51,5 +51,10 @@
 
     .parallax {
       height: 400px;
+      -moz-background-size: auto;
+      -webkit-background-size: auto;
+      background-attachment: scroll;
+      background-position: top;
+      background-size: auto;
     }
   }
