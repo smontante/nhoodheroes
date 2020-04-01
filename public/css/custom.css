@@ -97,19 +97,67 @@
   }
 
   @media only screen and (max-width: 490px) {
-    .centered {
-        font-size: 15px;
-        width: 100%;
-        padding: 70px;
-        height: 300px;
-      }
-
     .parallax {
-      height: 400px;
-      -moz-background-size: auto;
-      -webkit-background-size: auto;
-      background-attachment: scroll;
-      background-position: top;
-      background-size: auto;
+      /* The image used */
+      background-image: url('../img/nyc.jpg');
+    
+      /* Set a specific height */
+      height: 200px;
+      padding-top:100px;
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateZ(-1px) scale(1.5);
+      position: relative;
+      text-align: center;
+    }
+  
+    .centered {
+      border-radius: 3px;
+      padding: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 15px;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+  @media screen and (max-width: 390px) {
+    @keyframes ticker {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-100%, 0, 0); }
+    }
+    .tcontainer{
+      width: 100%;
+      overflow: hidden;
+    }
+    .ticker-wrap {
+      width: 100%;
+      padding-left: 100%;
+      background-color: black;
+      height: 20px;
+    }
+    .ticker-move {
+      display: inline-block;
+      white-space: nowrap;
+      padding-right: 100%;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-name: ticker;
+      animation-duration: 10s;
+    }
+    .ticker-move:hover {
+      animation-play-state: paused;
+    }
+    .ticker-item {
+      font-family: 'Share', cursive;
+      display: inline-block;
+      padding: 10px;
+      color: #99D315;
+      font-size: 20px;
     }
   }
+}
