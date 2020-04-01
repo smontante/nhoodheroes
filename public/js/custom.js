@@ -262,7 +262,7 @@ fetch(url)
 .then(data=>{return data.json()})
 .then(res=>{
   covidApidata = res;
-
+  
   usaData = {
     country: covidApidata.Countries[219].Country,
     total: covidApidata.Countries[219].TotalConfirmed
