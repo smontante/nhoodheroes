@@ -276,6 +276,8 @@ let italyResults = search('Italy', covidApidata.Countries);
 let usaResults = search('US', covidApidata.Countries);
 let spainResults = search('Spain', covidApidata.Countries);
 let germanyResults = search('Germany', covidApidata.Countries);
+let franceResults = search('France', covidApidata.Countries);
+let iranResults = search('Iran', covidApidata.Countries);
 
 countryData = [
   usaData = {
