@@ -24,13 +24,12 @@
     transform: translateZ(-1px) scale(1.5);
     position: relative;
     text-align: center;
-    color: #706F6F;
   }
 
   .centered {
     border-radius: 3px;
     padding: 20px;
-    color: #706F6F;
+    /* color: #706F6F; */
     position: absolute;
     top: 50%;
     left: 50%;

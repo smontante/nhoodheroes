@@ -9,7 +9,7 @@ p, a, span, li, strong, b {
 }
 
 .custom-primary-font {
-	font-family: 'Oxygen', sans-serif; !important;
+	font-family: 'Oxygen', sans-serif !important;
 }
 
 .custom-secondary-font {
