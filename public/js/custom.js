@@ -254,5 +254,62 @@
 })();
 /*]]>*/
 
+let covidApidata;
+let chinaData = {};
 
+const url = 'https://api.covid19api.com/summary';
+fetch(url) 
+.then(data=>{return data.json()})
+.then(res=>{
+  covidApidata = res;
 
+  usaData = {
+    country: covidApidata.Countries[219].Country,
+    total: covidApidata.Countries[219].TotalConfirmed
+  }
+
+  italyData = {
+    country: covidApidata.Countries[105].Country,
+    total: covidApidata.Countries[105].TotalConfirmed
+  }
+
+  chinaData = {
+    country: covidApidata.Countries[43].Country,
+    total: covidApidata.Countries[43].TotalConfirmed
+  }
+
+  spainData = {
+    country: covidApidata.Countries[194].Country,
+    total: covidApidata.Countries[194].TotalConfirmed
+  }
+
+  germanyData = {
+    country: covidApidata.Countries[78].Country,
+    total: covidApidata.Countries[78].TotalConfirmed
+  }
+
+  
+  
+  let usa = usaData.country;
+  let usaTotal = usaData.total;
+  document.getElementById('usa').innerHTML = usa + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + usaTotal;
+
+  let italy = italyData.country;
+  let italyTotal = italyData.total;
+  document.getElementById('italy').innerHTML = italy + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + italyTotal;
+  
+  let chinaTotal = chinaData.total;
+  let china = chinaData.country;
+  document.getElementById('china').innerHTML = china + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + chinaTotal;
+  
+  let spainTotal = spainData.total;
+  let spain = spainData.country;
+  document.getElementById('spain').innerHTML = spain + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + spainTotal;
+  
+  let germanyTotal = germanyData.total;
+  let germany = germanyData.country;
+  document.getElementById('germany').innerHTML = germany + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + germanyTotal;
+
+  console.log('data from response', covidApidata)
+})
+.catch(error=>console.log(error))
