@@ -55,6 +55,13 @@
     color: white;
   }
 
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
   @media only screen and (max-width: 490px) {
     .centered {
         font-size: 15px;
