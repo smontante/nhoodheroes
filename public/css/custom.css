@@ -149,9 +149,9 @@
       animation-name: ticker;
       animation-duration: 4s;
     }
-    .ticker-move:hover {
+    /* .ticker-move:hover {
       animation-play-state: paused;
-    }
+    } */
     .ticker-item {
       font-family: 'Share', cursive;
       display: inline-block;
