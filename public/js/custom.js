@@ -255,61 +255,54 @@
 /*]]>*/
 
 let covidApidata;
-let chinaData = {};
 
 const url = 'https://api.covid19api.com/summary';
 fetch(url) 
 .then(data=>{return data.json()})
 .then(res=>{
-  covidApidata = res;
-  
+
+covidApidata = res;
+
+let search = (key, inputArray) => {
+  for (let i = 0; i < inputArray.length; i++) {
+      if (inputArray[i].Country === key) {
+          return inputArray[i];
+      }
+  }
+}
+
+let chinaResults = search('China', covidApidata.Countries);
+let italyResults = search('Italy', covidApidata.Countries);
+let usaResults = search('US', covidApidata.Countries);
+let spainResults = search('Spain', covidApidata.Countries);
+let germanyResults = search('Germany', covidApidata.Countries);
+
+countryData = [
   usaData = {
-    country: covidApidata.Countries[219].Country,
-    total: covidApidata.Countries[219].TotalConfirmed
-  }
-
+    country: usaResults.Country,
+    total: usaResults.TotalConfirmed
+  },
   italyData = {
-    country: covidApidata.Countries[105].Country,
-    total: covidApidata.Countries[105].TotalConfirmed
-  }
-
+    country: italyResults.Country,
+    total: italyResults.TotalConfirmed
+  },
   chinaData = {
-    country: covidApidata.Countries[43].Country,
-    total: covidApidata.Countries[43].TotalConfirmed
-  }
-
+    country: chinaResults.Country,
+    total: chinaResults.TotalConfirmed
+  },
   spainData = {
-    country: covidApidata.Countries[194].Country,
-    total: covidApidata.Countries[194].TotalConfirmed
+    country: spainResults.Country,
+    total: spainResults.TotalConfirmed
+  },
+    germanyData = {
+      country: germanyResults.Country,
+      total: germanyResults.TotalConfirmed
   }
-
-  germanyData = {
-    country: covidApidata.Countries[78].Country,
-    total: covidApidata.Countries[78].TotalConfirmed
-  }
-
-  
-  
-  let usa = usaData.country;
-  let usaTotal = usaData.total;
-  document.getElementById('usa').innerHTML = usa + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + usaTotal;
-
-  let italy = italyData.country;
-  let italyTotal = italyData.total;
-  document.getElementById('italy').innerHTML = italy + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + italyTotal;
-  
-  let chinaTotal = chinaData.total;
-  let china = chinaData.country;
-  document.getElementById('china').innerHTML = china + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + chinaTotal;
-  
-  let spainTotal = spainData.total;
-  let spain = spainData.country;
-  document.getElementById('spain').innerHTML = spain + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + spainTotal;
-  
-  let germanyTotal = germanyData.total;
-  let germany = germanyData.country;
-  document.getElementById('germany').innerHTML = germany + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + germanyTotal;
-
-  console.log('data from response', covidApidata)
+];
+  document.getElementById('usa').innerHTML = countryData[0].country + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + countryData[0].total;
+  document.getElementById('italy').innerHTML = countryData[1].country + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + countryData[1].total;
+  document.getElementById('china').innerHTML = countryData[2].country + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + countryData[2].total;
+  document.getElementById('spain').innerHTML = countryData[3].country + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + countryData[3].total;
+  document.getElementById('germany').innerHTML = countryData[4].country + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + countryData[4].total;
 })
-.catch(error=>console.log(error))
+.catch(error=>console.log(error));
