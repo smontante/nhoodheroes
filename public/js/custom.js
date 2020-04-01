@@ -1,4 +1,3 @@
-
 /*<![CDATA[*/
 (function () {
   var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -26,7 +25,7 @@
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('product', {
         id: '4730789036091',
-        node: document.getElementById('product-component-1585699936750'),
+        node: document.getElementById('product-component-1585695262318'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
   "product": {
@@ -84,7 +83,6 @@
   }
 })();
 /*]]>*/
-
 /*<![CDATA[*/
 (function () {
   var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -112,7 +110,7 @@
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('product', {
         id: '4730799095867',
-        node: document.getElementById('product-component-1585699997741'),
+        node: document.getElementById('product-component-1585675358125'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
   "product": {
@@ -170,7 +168,6 @@
   }
 })();
 /*]]>*/
-
 /*<![CDATA[*/
 (function () {
   var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -198,7 +195,7 @@
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('product', {
         id: '4730802962491',
-        node: document.getElementById('product-component-1585700049638'),
+        node: document.getElementById('product-component-1585676281141'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
   "product": {
