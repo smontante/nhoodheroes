@@ -262,6 +262,7 @@ fetch(url)
 .then(res=>{
 
 covidApidata = res;
+console.log(res);
 
 let search = (key, inputArray) => {
   for (let i = 0; i < inputArray.length; i++) {
@@ -273,7 +274,7 @@ let search = (key, inputArray) => {
 
 let chinaResults = search('China', covidApidata.Countries);
 let italyResults = search('Italy', covidApidata.Countries);
-let usaResults = search('US', covidApidata.Countries);
+let usaResults = search('United States of America', covidApidata.Countries);
 let spainResults = search('Spain', covidApidata.Countries);
 let germanyResults = search('Germany', covidApidata.Countries);
 let franceResults = search('France', covidApidata.Countries);
