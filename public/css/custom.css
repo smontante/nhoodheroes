@@ -90,6 +90,12 @@
     font-size: 20px;
   }
 
+  .select-quantity-line {
+    width: 200px;
+    height: 10px;
+    background-color: #FFC439;
+  }
+
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
