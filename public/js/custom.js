@@ -304,10 +304,6 @@ countryData = [
   franceData = {
     country: franceResults.Country,
     total: franceResults.TotalConfirmed
-  },
-  iranData = {
-    country: iranResults.Country,
-    total: iranResults.TotalConfirmed
   }
 ];
   document.getElementById('usa').innerHTML = countryData[0].country + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + countryData[0].total;
@@ -316,6 +312,5 @@ countryData = [
   document.getElementById('spain').innerHTML = countryData[3].country + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + countryData[3].total;
   document.getElementById('germany').innerHTML = countryData[4].country + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + countryData[4].total;
   document.getElementById('france').innerHTML = countryData[5].country + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + countryData[5].total;
-  document.getElementById('iran').innerHTML = countryData[6].country + ' Covid Cases: ' + '<i style="color:#99D315" class="fas fa-chevron-up"></i>' + countryData[6].total;
 })
 .catch(error=>console.log(error));
