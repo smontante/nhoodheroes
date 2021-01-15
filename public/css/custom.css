@@ -11,10 +11,10 @@
 
 .parallax {
     /* The image used */
-    background-image: url('../img/nyc.jpg');
+    background-image: url('../img/lemon-grove-non-profit.jpg');
   
     /* Set a specific height */
-    height: 200px;
+    height: 400px;
     padding-top:100px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -68,7 +68,7 @@
   .ticker-wrap {
     width: 100%;
     padding-left: 100%;
-    background-color: black;
+    background-color: #6F16AD;
     height: 80px;
   }
 
@@ -79,15 +79,15 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-name: ticker;
-    animation-duration: 8s;
+    animation-duration: 28s;
   }
 
   .ticker-item {
-    font-family: 'Share', cursive;
+    font-family: 'Oswald', sans-serif;
     display: inline-block;
     padding: 20px;
-    color: #99D315;
-    font-size: 20px;
+    color: #233049;
+    font-size: 40px;
   }
 
   .select-quantity-line {
@@ -106,7 +106,7 @@
   @media only screen and (max-width: 490px) {
     .parallax {
       /* The image used */
-      background-image: url('../img/nyc.jpg');
+      background-image: url('../img/san-diego-non-profit.jpg');
     
       /* Set a specific height */
       height: 300px;
